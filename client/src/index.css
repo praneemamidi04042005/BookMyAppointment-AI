@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  background: #f8fbff;
+}
+
+h1,
+h2,
+h3,
+h4,
+.brand-heading {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+::selection {
+  background: rgba(14, 165, 233, 0.2);
+}
