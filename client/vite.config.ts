@@ -4,8 +4,10 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const repoBase = '/BookMyAppointment-AI/';
 
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
+  base: mode === 'production' ? repoBase : '/',
   plugins: [react()],
   resolve: {
     alias: {
@@ -15,4 +17,4 @@ export default defineConfig({
   server: {
     port: 5173,
   },
-});
+}));

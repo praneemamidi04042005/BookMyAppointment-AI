@@ -233,6 +233,19 @@ Seed demo data:
 npm run seed --prefix server
 ```
 
+## GitHub Pages Deployment
+
+The frontend can be deployed to GitHub Pages as a static site. The backend should stay deployed on Render or another Node host.
+
+Steps:
+
+1. Deploy the backend to Render first and copy the public API URL.
+2. In the GitHub repository settings, enable GitHub Pages from GitHub Actions.
+3. Set the repository variable `VITE_API_BASE_URL` to your live backend API, for example `https://bookmyappointment-ai-api.onrender.com/api`.
+4. Push to `main`; the workflow in `.github/workflows/deploy-pages.yml` will build and publish the client automatically.
+
+The published GitHub Pages site will use hash-based routing so refreshes and deep links continue to work.
+
 ## Folder Structure
 
 ```text
